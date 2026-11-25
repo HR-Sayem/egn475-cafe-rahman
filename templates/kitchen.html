@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Kitchen Board - Cafe Calle Ocho{% endblock %}
+
+{% block content %}
+
+<h1>Kitchen Board</h1>
+
+<p>View current customer orders and their status.</p>
+
+{% for order in orders %}
+<article>
+    <h3>Order #{{ order.id }}</h3>
+
+    <p><strong>Customer:</strong> {{ order.customer }}</p>
+
+    <p><strong>Item:</strong> {{ order["items"] }}</p>
+    <p><strong>Status:</strong> {{ order.status }}</p>
+</article>
+{% endfor %}
+
+{% endblock %}
