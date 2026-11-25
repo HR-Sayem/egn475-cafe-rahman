@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Cafe Calle Ocho{% endblock %}
+
+{% block content %}
+
+<h1>Welcome to Cafe Calle Ocho</h1>
+
+<p>
+    Enjoy fresh Cuban food, coffee, and bakery items
+    at Cafe Calle Ocho.
+</p>
+
+<h2>Our Cafe</h2>
+
+<p>
+    We serve delicious Cuban sandwiches, fresh coffee,
+    and traditional bakery items in Little Havana, Miami.
+</p>
+
+<a href="{{ url_for('menu') }}" role="button">
+    View Our Menu
+</a>
+
+{% endblock %}
