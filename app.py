@@ -100,7 +100,7 @@ def menu():
     return render_template("menu.html", items=SAMPLE_ITEMS)
 # Menu item detail page
 @app.get("/menu/<int:item_id>")
-def item_detail(item_id):
+def item_detail(item_id: int):
     item = next(
         (item for item in SAMPLE_ITEMS if item["id"] == item_id),
         None
